@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ["Allen Madsen"]
   s.email       = ["blatyo@gmail.com"]
   s.homepage    = "http://github.com/blatyo/DamLev"
-  s.summary = %q{Measure the distance between two strings.}
+  s.summary     = %q{Measure the distance between two strings.}
   s.description = %q{Measures the distance between two strings using the Damerau–Levenshtein distance algorithm. For more, see http://en.wikipedia.org/wiki/Damerau%E2%80%93Levenshtein_distance }
 
   s.required_rubygems_version = ">= 1.3.6"
