@@ -1,2 +1,3 @@
-gem 'rspec'
-gem 'yard'
+source :gemcutter
+
+gemspec

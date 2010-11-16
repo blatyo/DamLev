@@ -16,7 +16,7 @@ DamLev implements the [Damerau–Levenshtein distance algorithm][1]. It is an al
     DamLev.distance("DamLev", "Damev")   # => 1 # deletion
     DamLev.distance("DamLev", "DamLiev") # => 1 # insertion
     DamLev.distance("DamLev", "Dam7ev")  # => 1 # substitution
-    DamLev.distance("DamLev", "DameLv")  # => 2 # transposition
+    DamLev.distance("DamLev", "DameLv")  # => 1 # transposition
 
 ## Note on Patches/Pull Requests
  

@@ -18,8 +18,8 @@ describe DamLev do
       DamLev.distance("DamLev", "Dam7ev").should == 1
     end
     
-    it "should calculate a distance of two when two characters have been swapped between two strings" do
-      DamLev.distance("DamLev", "DameLv").should == 2
+    it "should calculate a distance of one when two characters have been swapped between two strings" do
+      DamLev.distance("DamLev", "DameLv").should == 1
     end
     
     it "should calculate a distance equal to the longest string if the other is empty" do

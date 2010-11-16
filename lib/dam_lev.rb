@@ -9,13 +9,17 @@ class DamLev
       (1..str2.length).each do |j|
         sub_cost = str1[i-1] == str2[j-1] ? 0 : 1
         
-        distance_matrix[i][j] = [distance_matrix[i-1][j] + 1,                 # deletion
-                                 distance_matrix[i][j-1] + 1,                 # insertion
-                                 distance_matrix[i-1][j-1] + sub_cost].min        # substitution
+        distance_matrix[i][j] = [
+          distance_matrix[i-1][j] + 1,            # deletion
+          distance_matrix[i][j-1] + 1,            # insertion
+          distance_matrix[i-1][j-1] + sub_cost    # substitution
+        ].min    
                                     
         if i > 1 && j > 1 && str1[i-1] == str2[j-2] && str1[i-2] == str2[j-1]
-          distance_matrix[i+1][j+1] = [distance_matrix[i][j], 
-                                       distance_matrix[i-2][j-2] + sub_cost].min  # transposition
+          distance_matrix[i][j] = [
+            distance_matrix[i][j], 
+            distance_matrix[i-2][j-2] + sub_cost  # transposition
+          ].min
         end
       end
     end
